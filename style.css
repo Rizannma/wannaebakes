@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --black: #1B1722;
+    --white: #f0f0f0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline:none;
+    text-decoration: none;
+    text-transform: none;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hiddden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+    border-radius: 5rem;
+}
+
+.header{
+    top: 0;right: 0;left:0;
+    background-color:#BBA398;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: .5rem 7%;
+    height: 60px;
+    z-index: 999;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+}
+.header .logoContent .logo img{
+    height: 6rem;
+}
+.header .logoContent .logoName{
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.header .navbar a{
+    font-size: 1.75rem;
+    margin-right: 3rem;
+    color: var(--white);
+    font-weight: 500;
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+.header .icon i{
+    font-size: 1.7rem;
+    margin-right: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.header .icon i:hover{
+    color: var(--black);
+}
+.header .search{
+    display: none;
+    top: 20%;
+    background-color: transparent;
+    width: 50%;
+    right: 11%;
+    height: 5rem;
+    position: absolute;
+}
+.header .search input{
+    width: 100%;
+    height: 75%;
+    font-size: 1.5rem;
+    background-color: #E7DFD4;
+    border-width: .5px;
+    border-color: #785C43;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--box-shadow);
+}
+.header .search.active{
+    display: inline-block;
+}
+#menu-bar{
+    display: none;
+}
+
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(resources/home\ bg.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.home .homeContent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 4rem;
+}
+.home .homeContent h2{
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-right: 55%;
+    margin-bottom: 2rem;
+    line-height: 5.5rem;
+    color: var(--black);
+    text-shadow: var(--box-shadow );
+}
+.home .homeContent p{
+    text-transform: none;
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-right: 55%;
+    margin-bottom: 2rem;
+}
+.home .homeContent .home-btn{
+    height: 3rem;
+    margin-right: 60%;
+}
+.home .homeContent .home-btn button{
+    font-size: 1.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 3rem;
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+}
+.home .homeContent .home-btn button:hover{
+    font-size: 1.5rem;
+    background-color: #8E6C4F;
+    color: var(--white);
+}
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.product{
+    background-color: #D8C3B2;
+    min-height: 100vh;
+    padding: 4rem;
+}
+.product .prouct-row{
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+}
+.product .heading{
+    font-size: 2rem;
+    top: 0;
+    margin-bottom: 2rem;
+}
+.product .product-row .box{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #E8E4D8;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: .5rem;
+    border-radius: 3rem;
+    margin-right: 3rem;
+    
+}
+.product .product-row .img img{
+    height: 70%;
+    width: 70%;
+}
+.product .product-row .img img:hover{
+    transform: scale(1.2);
+}
+.product .product-row .product-content{
+    margin-bottom: 4rem;
+}
+.product .product-row .product-content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.product .product-row .product-content p{
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    text-align: justify;
+    color: var(--black);
+}
+.product .product-row .product-content .orderNow {
+    height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.product .product-row .product-content .orderNow button {
+    font-size: 1.6rem;
+    background-color: #B89B82;
+    color: var(--black);
+    border-radius: .7rem;
+    padding: .4rem 1rem;
+    cursor: pointer;
+}
+.product .product-row .product-content .orderNow button:hover{
+    font-size: 1.6rem;
+    background-color: #8E6C4F;
+    color: var(--white);
+}
+
+
+.blogs{
+    background: url(resources/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.blogs .blogs-row .box{
+    display: flex;
+    align-items: center;
+}
+.blogs .blogs-row .box .img{
+    flex: 1 1 45rem;
+}
+.blogs .blogs-row .box .img img{
+    width: 100%;
+    padding: 5rem;
+}
+.blogs .blogs-row .box .content{
+    flex: 1 1 60rem;
+    padding: 10rem;
+}
+.blogs .blogs-row .box .content h3{
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--black);
+    text-shadow: var(--box-shadow);
+}
+.blogs .blogs-row .box .content p{
+    text-indent: 5rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    padding: 1rem 0;
+    line-height: 1.8;
+    text-align: justify;
+}
+.blogs .blogs-row .box .content a{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.blogs .blogs-row .box .content a:hover{
+    color: var(--black);
+    text-shadow: var(--box-shadow);
+}
+
+
+.newsletter{
+    background: url(resources/1.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.newsletter form{
+    max-width: 45rem;
+    text-align: center;
+    padding: 5rem 0;
+}
+.newsletter form h3{
+    font-size: 3rem;
+    color: var(--black);
+    padding-bottom: .7rem;
+}
+.newsletter form .box{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    border-radius: .5rem;
+}
+.newsletter form .box2{
+    width: 30%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: .5rem .5rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 3rem;
+}
+.newsletter form .box2:hover{
+    color: var(--white);
+    font-weight: bold;
+    background-color: #8E6C4F;
+    outline: .1rem solid var(--white);
+    
+}
+
+.review{
+    background-color: #D8C3B2;
+}
+.review .review-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.review .review-row .box{
+    width: 50%;
+    margin-bottom: 3rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    background-color:#E8E4D8;
+    border-radius: 3rem;
+}
+.review .review-row .box .client-review{
+    margin-bottom: 1.5rem;
+}
+.review .review-row .box .client-review p{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.review .review-row .box .client-info{
+    display: flex;
+    align-items: center;
+}
+.review .review-row .box .client-info .img{
+    padding-right: 3rem;
+}
+.review .review-row .box .client-info .img img{
+    width: 6rem;
+    height:6rem;
+    clip-path: circle(50% at 50% 50%);
+}
+.review .review-row .box .client-info .clientDetailed h3{
+    font-size: 2rem;
+}
+.review .review-row .box .client-info .clientDetailed p{
+    font-size: 1.5rem;
+}
+
+.footer{
+    height: 20rem;
+    background: url(resources/bg3.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center ;
+    padding: 2rem;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.footer .box-container .mainBox .content{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.footer .box-container .mainBox .content img{
+    max-width: 100%; 
+    height: 7rem; 
+}
+.footer .box-container .mainBox .content h1{
+    font-size: 2rem;
+    color: var(--black);
+    border-bottom: .1rem solid var(--black);
+}
+.footer .box-container .mainBox p{
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+.footer .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding: .6rem 0;
+    border-bottom: .1rem solid var(--black);
+   width: 140px;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    font-weight: bold;
+    color: #5B4D46;
+    
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+.footer .box-container .box a:hover i{
+    color: #948076;
+    padding-right: 2rem;
+}
+.footer .share{
+    padding: 3rem;
+    text-align: center;
+}
+.footer .share a{
+    height: 40px;
+    width: 40px;
+    margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+    font-size: 1.8rem;
+    display: inline-block;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 100%; 
+}
+
+.footer .share a:hover{
+    background: #BBA398;
+    color: var(--black);
+}
+.footer .credit{
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: center;
+}
+
+
+
+.swiper-pagination-bullet{
+    background-color: var(--black);
+}
+.swiper-button-next{
+    color: var(--black);
+}
+.swiper-button-prev{
+    color: var(--black);
+}
+
+
+
+
+
+
+
+/* media queries for web responsive */
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.3rem 3rem;
+    }
+    .home .homeContent{
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media(max-width:760px) {
+    #menu-bar{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        height: 80vh;
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    .header .navbar a{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+}
+
+.home .homeContent{
+    margin-left: 0;
+    width: 90%;
+}
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+}
